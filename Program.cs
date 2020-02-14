@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace FizzBuzz
@@ -62,6 +61,21 @@ namespace FizzBuzz
 					Console.WriteLine(i);
 			}
 		}
+		public void FizzBuzzIf2()
+		{
+			for (int i = 1; i <= 100; i++)
+			{
+				Console.WriteLine(
+					i % 15 == 0 ? "FizzBuzz" :
+					i % 3 == 0 ? "Fizz" :
+					i % 5 == 0 ? "Buzz" :
+					i.ToString());
+			}
+		}
+		public void FizzBuzzIf3()
+		{
+			for(int i=1;i<=100;i++)Console.WriteLine(i % 15 == 0 ? "FizzBuzz" : i % 3 == 0 ? "Fizz" : i % 5 == 0 ? "Buzz" : i.ToString());
+		}
 		public void FizzBuzzPerformance()
 		{
 			// Console.WriteLine(7 * 15);
@@ -100,7 +114,7 @@ namespace FizzBuzz
 		static void Main(string[] args)
 		{
 			FizzBuzz f = new FizzBuzz();
-			f.FizzBuzzBool();
+			f.FizzBuzzIf3();
 			Console.ReadLine();
 		}
 	}

@@ -5,6 +5,7 @@ namespace FizzBuzz
 {
 	class FizzBuzz
 	{
+		public void Skogix() => Console.WriteLine(String.Join("\n", Enumerable.Range(1,100).Select(i=>i%15==0?"FizzBuzz":i%3==0?"Fizz":i%5==0?"Buzz":i.ToString())));
 		public void FizzBuzzLinq()
 		{
 			var collection = Enumerable.Range(1, 100).Select(
@@ -105,6 +106,7 @@ namespace FizzBuzz
 		}
 		public void FizzBuzzCrazy()
 		{
+			// TODO: Kolla upp string interpolation
 			for (int i = 0; i < 100;) Console.Write($"{(++i % 3 * i % 5 < 1 ? 0 : i):#}{i % 3:;;Fizz}{i % 5:;;Buzz}\n");
 		}
 
@@ -114,8 +116,8 @@ namespace FizzBuzz
 		static void Main(string[] args)
 		{
 			FizzBuzz f = new FizzBuzz();
-			f.FizzBuzzIf3();
-			Console.ReadLine();
+			f.Skogix();
+			Console.ReadKey();
 		}
 	}
 }
